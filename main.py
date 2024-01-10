@@ -5,7 +5,7 @@ import sqlite3
 
 
 # Déclaration des variables
-con = sqlite3.connect("Chinook.db")
+con = sqlite3.connect("immo_fr.db")
 
 app = FastAPI()
 

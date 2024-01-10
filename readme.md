@@ -4,7 +4,7 @@
 
 ### Contexte
 
-Rendu du brief en semaine 3 introduisant aux principes d'API et API REST en utilisant FastAPI. Après avoir réalisé le [second brief](https://github.com/Sandalcho7/simplon_brief02) nous demandant de rédiger les requêtes SQL pour répondre aux différentes user stories, nous sommes maintenant en charge de développer l'API REST exposant les résultats de ces requêtes en utilisant FastAPI.
+Rendu du brief en semaine 3 introduisant aux principes d'API et API REST en utilisant FastAPI. Après avoir réalisé le second brief ([voir ici](https://github.com/Sandalcho7/simplon_brief02)) nous demandant de rédiger les requêtes SQL pour répondre aux différentes user stories, nous sommes maintenant en charge de développer l'API REST exposant les résultats de ces requêtes en utilisant FastAPI.
 
 ### Prérequis
 
