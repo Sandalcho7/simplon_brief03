@@ -21,9 +21,11 @@ def execute_sql(con, query):
     cur = con.cursor()
     res = cur.execute(query)
     result = res.fetchall()
+    columns = [column[0] for column in cur.description]
+    result_with_columns = [dict(zip(columns, row)) for row in result]
     if not result:
         raise HTTPException(status_code=400, detail="Can't find any result")
-    return result
+    return result_with_columns
 
 
 
@@ -53,7 +55,7 @@ async def last_transactions(city: str = Path(description="Ville"),
 async def transactions_count(city: str = Path(description="Ville"),
                              year: str = Path(description="Année")):
     year = validate_year(year)
-    query = f"SELECT COUNT(*) FROM transactions_sample ts WHERE ville LIKE '{city.upper()}%' AND date_transaction LIKE '{year}%'"
+    query = f"SELECT COUNT(*) as nb_transactions FROM transactions_sample ts WHERE ville LIKE '{city.upper()}%' AND date_transaction LIKE '{year}%'"
     return execute_sql(con, query)
         
 
@@ -73,7 +75,7 @@ async def transactions_count2(city: str = Path(description="Ville"),
                               year: str = Path(description="Année"),
                               rooms: int = Path(description="Nombre de pièces")):
     year = validate_year(year)
-    query = f"SELECT COUNT(*) FROM transactions_sample ts WHERE type_batiment = '{type.capitalize()}' AND n_pieces = {rooms} AND ville LIKE '{city.upper()}%' AND date_transaction LIKE '{year}%'"
+    query = f"SELECT COUNT(*) as nb_transactions FROM transactions_sample ts WHERE type_batiment = '{type.capitalize()}' AND n_pieces = {rooms} AND ville LIKE '{city.upper()}%' AND date_transaction LIKE '{year}%'"
     return execute_sql(con, query)
 
 
