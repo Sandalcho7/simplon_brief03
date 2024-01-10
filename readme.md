@@ -19,3 +19,7 @@ Avant de démarrer le développement le projet, il est nécessaire d'installer F
 [Premiers pas sur FastAPI](https://fastapi.tiangolo.com/fr/tutorial/first-steps/)
 
 [Paramètres de chemin sur FastAPI](https://fastapi.tiangolo.com/fr/tutorial/path-params/)
+
+### Notes
+
+Certaines requêtes SQL sont légèrement différentes des user stories fournies, par l'ajout de paramètres, je les ai rendues plus génériques et donc utilisables dans de plus nombreux cas (différentes années, villes, etc.).
