@@ -34,7 +34,7 @@ Pour un hôte (127.0.0.1) et un port (8000), accédez à http://127.0.0.1:8000/d
 <hr>
 
 User story 1 :
-URL: /revenu_fiscal_moyen/{city}
+URL: /average_revenue/{city}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -43,7 +43,7 @@ URL: /revenu_fiscal_moyen/{city}
         400 Bad Request if null response
 
 User story 2 :
-URL: /dernieres_transactions/{city}_last_{number}
+URL: /last_transactions/{city}_last_{number}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -53,7 +53,7 @@ URL: /dernieres_transactions/{city}_last_{number}
         400 Bad Request if null response
 
 User story 3 :
-URL: /nombre_transactions/{city}_{year}
+URL: /transactions_count/{city}_{year}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -63,7 +63,7 @@ URL: /nombre_transactions/{city}_{year}
         400 Bad Request if null response
 
 User story 4 :
-URL: /prix_moyen_m2/{year}_{type}
+URL: /average_price_per_square_meter/{year}_{type}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -73,7 +73,7 @@ URL: /prix_moyen_m2/{year}_{type}
         400 Bad Request if null response
 
 User story 5 :
-URL: /nombre_transactions_2/{city}_{year}_{type}_{rooms}
+URL: /transactions_count2/{city}_{year}_{type}_{rooms}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -85,7 +85,7 @@ URL: /nombre_transactions_2/{city}_{year}_{type}_{rooms}
         400 Bad Request if null response
 
 User story 6 :
-URL: /repartition_pieces/{city}_{year}_{type}
+URL: /transactions_by_pieces/{city}_{year}_{type}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -95,7 +95,7 @@ URL: /repartition_pieces/{city}_{year}_{type}
         400 Bad Request if null response
 
 User story 7 :
-URL: /prix_moyen_m2_2/{city}_{year}_{type}
+URL: /average_price_per_square_meter2/{city}_{year}_{type}
     Method: GET
     URL Params:
         city=[string] (required)
@@ -106,14 +106,14 @@ URL: /prix_moyen_m2_2/{city}_{year}_{type}
         400 Bad Request if null response
 
 User story 8 :
-URL: /departement_transactions/
+URL: /transactions_by_dpt/
     Method: GET
     Success Response: JSON object with departements ranking for transactions count
     Error Response:
         400 Bad Request if null response
 
 User story 9 :
-URL: /nombre_transactions_3/{year1}_{revenu}_{year2}_{type}
+URL: /transactions_count3/{year1}_{revenu}_{year2}_{type}
     Method: GET
     URL Params:
         year1=[string] (required) Year of the average taxable income
