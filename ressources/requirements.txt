@@ -1,0 +1,4 @@
+fastapi==0.103.0
+sqlite==3.41.2
+uvicorn==0.20.0
+pyyaml==5.4.1
