@@ -133,7 +133,7 @@ Pour un hôte (127.0.0.1) et un port (8000), accédez à http://127.0.0.1:8000/d
     Error Response:
         400 Bad Request if null response
 
-<br>User story 10
+<br>User story 10 :
 
     URL: /cities_top10_transactions/
     Method: GET
@@ -141,7 +141,7 @@ Pour un hôte (127.0.0.1) et un port (8000), accédez à http://127.0.0.1:8000/d
     Error Response:
         400 Bad Request if null response
 
-<br>User stories 11 & 12
+<br>User stories 11 & 12 :
 
     URL: /cities_top10_price/{type}
     Method: GET
